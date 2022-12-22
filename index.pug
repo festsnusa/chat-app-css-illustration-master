@@ -1,0 +1,49 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Chat App CSS Illustration
+    link(rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer")
+    link(rel="stylesheet", href="./style.css")
+  body 
+    header.header
+      .phone 
+        .phone__header 
+          .phone__left 
+            i.fa-solid.fa-angle-left
+            img.phone__avatar(src="./images/avatar.jpg", alt="avatar")
+            .phone__info 
+              p.phone__name Samuel Green 
+              p.phone__status Available to Work
+          i.fa-solid.fa-ellipsis-vertical
+        .phone__content
+          p.phone__text.phone__text_left That sounds great. I'd be happy to discuss more.
+          p.phone__text.phone__text_left Could you send over some pictures of your dog, please?
+          .phone__images 
+            img.phone__image(src="./images/dog-image-1.jpg", alt="dog-1")
+            img.phone__image(src="./images/dog-image-2.jpg", alt="dog-2")
+            img.phone__image(src="./images/dog-image-3.jpg", alt="dog-3")
+          .phone__right
+            p.phone__text.phone__text_right Here are a few pictures. She's a happy girl! 
+            p.phone__text.phone__text_right Can you make it?
+          p.phone__text.phone__text_left She looks so happy! The time we discussed works. How long shall I take her out for?
+          .phone__text.phone__text_left.phone__text_gradient
+            .phone__box
+              i.fa-regular.fa-circle
+              p 30 minutes walk 
+            span.phone__price $29
+          .phone__text.phone__text_left.phone__text_gradient
+            .phone__box
+              i.fa-regular.fa-circle
+              p 1 hour walk 
+            span.phone__price $49
+        .phone__footer 
+          .footer__box
+            input.footer__input(type="text" placeholder="Type a message...")
+            i.fa-solid.fa-circle-chevron-right.footer__submit
+    main.main
+      h1.main__title Simple booking
+      p.main__subtitle Stay in touch with our dog walkers through the chat interface. This makes it easy to discuss arrangements and make bookings. Once the walk has been completed you can rate your walker and book again all through the chat.

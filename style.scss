@@ -1,0 +1,288 @@
+$violetPale: hsl(276, 100%, 81%);
+$violetModerate: hsl(276, 55%, 52%);
+$violetDark: hsl(271, 15%, 43%);
+$violetDesaturated: hsl(271, 36%, 24%);
+$violetParagraph: hsl(270, 7%, 64%);
+$blueGray: hsl(206, 6%, 79%);
+
+$magenta: hsl(293, 100%, 63%);
+$violetLight: hsl(264, 100%, 61%);
+$linearGradient: linear-gradient(108deg, $violetLight 0%, $magenta 100%);
+$linearGradientRevert: linear-gradient(108deg, $magenta 0%, $violetLight 100%);
+
+$white: hsl(0, 0%, 100%);
+$appBackground: hsl(270, 20%, 96%);
+$submitButton: hsl(271, 36%, 24%);
+$radioButton: hsl(289, 100%, 72%);
+
+/* rubik-regular - latin */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/rubik-v23-latin-regular.eot');
+  /* IE9 Compat Modes */
+  src: local(''),
+    url('./fonts/rubik-v23-latin-regular.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */
+    url('./fonts/rubik-v23-latin-regular.woff2') format('woff2'),
+    /* Super Modern Browsers */
+    url('./fonts/rubik-v23-latin-regular.woff') format('woff'),
+    /* Modern Browsers */
+    url('./fonts/rubik-v23-latin-regular.ttf') format('truetype'),
+    /* Safari, Android, iOS */
+    url('./fonts/rubik-v23-latin-regular.svg#Rubik') format('svg');
+  /* Legacy iOS */
+}
+
+/* rubik-500 - latin */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./fonts/rubik-v23-latin-500.eot');
+  /* IE9 Compat Modes */
+  src: local(''),
+    url('./fonts/rubik-v23-latin-500.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */
+    url('./fonts/rubik-v23-latin-500.woff2') format('woff2'),
+    /* Super Modern Browsers */
+    url('./fonts/rubik-v23-latin-500.woff') format('woff'),
+    /* Modern Browsers */
+    url('./fonts/rubik-v23-latin-500.ttf') format('truetype'),
+    /* Safari, Android, iOS */
+    url('./fonts/rubik-v23-latin-500.svg#Rubik') format('svg');
+  /* Legacy iOS */
+}
+
+/* rubik-700 - latin */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./fonts/rubik-v23-latin-700.eot');
+  /* IE9 Compat Modes */
+  src: local(''),
+    url('./fonts/rubik-v23-latin-700.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */
+    url('./fonts/rubik-v23-latin-700.woff2') format('woff2'),
+    /* Super Modern Browsers */
+    url('./fonts/rubik-v23-latin-700.woff') format('woff'),
+    /* Modern Browsers */
+    url('./fonts/rubik-v23-latin-700.ttf') format('truetype'),
+    /* Safari, Android, iOS */
+    url('./fonts/rubik-v23-latin-700.svg#Rubik') format('svg');
+  /* Legacy iOS */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1rem;
+  font-family: 'Rubik';
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+
+  background-color: $appBackground;
+
+}
+
+.fa-solid {
+  color: $white;
+}
+
+.phone {
+  overflow: hidden;
+  border-radius: 50px;
+  border: 1.5rem solid $white;
+  box-shadow: 4px 4px 8px 0px rgba($violetDesaturated, 0.2);
+  transform: scale(0.8);
+  background-color: $appBackground;
+  width: 30rem;
+
+  &__header {
+
+    padding: 3rem 2rem 2rem;
+    display: flex;
+    background: $linearGradient;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 25%;
+      width: 50%;
+      height: 2.5rem;
+      background-color: #fff;
+      border-radius: 0 0 50px 50px;
+    }
+
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__avatar {
+    width: 3rem;
+    border-radius: 50%;
+    border: 2px solid $white;
+  }
+
+  &__name, &__status {
+    color: $white;
+  }
+
+  &__name {
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+
+  &__status {
+    font-size: 0.8rem;
+  }
+
+  &__content {
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__text {
+
+    padding: 1rem;
+    max-width: 50%;
+    border-radius: 1rem;
+    font-weight: 500;
+
+    &_left {
+      color: $violetModerate;
+      background-color: #EDE5F3;
+    }
+
+    &_right {
+      background-color: #fff;
+    }
+
+    &_gradient {
+      background: $linearGradientRevert;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-width: 18rem;
+      color: #fff;
+    }
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__price {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  &__images {
+    display: flex;
+    gap: 1rem;
+    justify-content: end;
+  }
+
+  &__image {
+    width: 5rem;
+    border-radius: 1rem;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1rem;
+  }
+
+  &__footer {
+    padding: 1rem;
+    width: 100%;
+  }
+}
+
+.main {
+
+  text-align: center;
+  padding: 1.7rem 1.7rem 6rem;
+
+  &__title {
+    font-size: 3rem;
+    padding: 2rem;
+    color: $violetDesaturated;
+  }
+
+  &__subtitle {
+    color: $violetDesaturated;
+    line-height: 2rem;
+  }
+}
+
+.footer {
+
+  &__box {
+    position: relative;
+    display: flex;
+  }
+
+  &__input {
+    padding: 1.5rem 1.5rem 1rem;
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-family: 'Rubik';
+  }
+
+  &__submit {
+    cursor: pointer;
+    position: absolute;
+    color: $violetDesaturated;
+    right: 1rem;
+    top: 1.3rem;
+    transform: scale(2);
+  }
+}
+
+@media (min-width: 800px) {
+ 
+  body {
+    flex-direction: row;
+    gap: 5rem;
+  }
+
+  .main {
+    text-align: start;
+
+    &__title {
+      padding-left: 0;
+    }
+
+    &__subtitle {
+      max-width: 27rem;
+    }
+  }
+}
