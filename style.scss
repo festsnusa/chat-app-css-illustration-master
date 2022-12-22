@@ -224,6 +224,23 @@ body {
   }
 }
 
+.header {
+  position: relative;
+
+  &:before {
+    position: absolute;
+    content: "";
+    width: 550px;
+    height: 200%;
+    background-color: $violetLight;
+    background-image: linear-gradient(to bottom, $magenta, $violetLight);
+    z-index: -1;
+    bottom: 0;
+    left: -64%;
+    border-radius: 17.5rem;
+  }
+}
+
 .main {
 
   text-align: center;
